@@ -1,0 +1,17 @@
+#spring.application.name=Memo
+#spring.thymeleaf.cache=false
+
+spring:
+    mvc:
+        static-path-pattern: /static/** # static 안에 파일들 경로설정시 앞에/static 붙이겠따
+    datasource:
+        driver-class-name: com.mysql.cj.jdbc.Driver
+        url: jdbc:mysql://localhost:3306/memo_241129
+        username: root
+        password: root
+    thymeleaf: 
+        cache: false
+    application:
+        name: Memo
+mybatis:
+    mapper-locations: mappers/*Mapper.xml 
