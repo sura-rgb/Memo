@@ -2,13 +2,15 @@
 #spring.thymeleaf.cache=false
 
 spring:
+    config:
+        import: security-variable.yml
     mvc:
         static-path-pattern: /static/** # static 안에 파일들 경로설정시 앞에/static 붙이겠따
     datasource:
         driver-class-name: com.mysql.cj.jdbc.Driver
         url: jdbc:mysql://localhost:3306/memo_241129
         username: root
-        password: root
+        password: ${mysql.password} # security의 비밀번호를 끌어다씀, 깃에등록가능
     thymeleaf: 
         cache: false
     application:
